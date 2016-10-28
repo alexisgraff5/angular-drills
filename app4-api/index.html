@@ -1,7 +1,14 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<body ng-controller='mainCtrl'>
+		<div ng-repeat="ship in ships">
+			<div><strong>Name:</strong> {{ship.name}}</div>
+			<div><strong>Model:</strong> {{ship.model}}</div>
+			<div><strong>Price:</strong> {{ship.cost_in_credits}}</div>
+			<div><strong>Crew:</strong> {{ship.crew}}</div>
+			<div><strong>Passengers:</strong> {{ship.passengers}}</div>
+			<hr>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
